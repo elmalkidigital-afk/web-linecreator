@@ -5,7 +5,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden gradient-bg">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden gradient-bg pt-20" style={{ zIndex: 0 }}>
       {/* Animated orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
