@@ -16,12 +16,12 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <Image
                 src={LOGO_URL}
-                alt="Web-LineCreator"
+                alt="Web-LineCreation"
                 width={36}
                 height={36}
                 className="rounded-lg"
               />
-              <span className="font-bold text-gradient">Web-LineCreator</span>
+              <span className="font-bold text-gradient">Web-LineCreation</span>
             </div>
             <p className="text-sm text-gray-500 leading-relaxed">
               Créateur de sites web sur-mesure pour donner vie à vos projets.
@@ -115,7 +115,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-border/50 text-center text-xs text-gray-600">
-          &copy; {new Date().getFullYear()} Web-LineCreator par Abderrahmane El
+          &copy; {new Date().getFullYear()} Web-LineCreation par Abderrahmane El
           Malki. Tous droits réservés.
         </div>
       </div>

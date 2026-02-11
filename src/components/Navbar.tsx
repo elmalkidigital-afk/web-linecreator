@@ -41,13 +41,13 @@ export default function Navbar() {
         <a href="#" className="flex items-center gap-3 group">
           <Image
             src={LOGO_URL}
-            alt="Web-LineCreator Logo"
+            alt="Web-LineCreation Logo"
             width={40}
             height={40}
             className="rounded-xl group-hover:scale-110 transition-transform"
           />
           <span className="text-lg font-bold text-gradient hidden sm:inline">
-            Web-LineCreator
+            Web-LineCreation
           </span>
         </a>
 
