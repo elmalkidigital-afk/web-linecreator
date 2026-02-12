@@ -28,31 +28,31 @@ const skills = [
 
 const milestones = [
   {
-    year: "2023",
-    title: "Formation E-commerce",
+    year: "2024",
+    title: "Développement Web & E-commerce",
     description:
-      "Certification en conception de sites e-commerce. Premiers projets clients.",
+      "Lancement de l'activité freelance. Développement et maintenance de boutiques e-commerce pour des clients variés.",
     icon: Code2,
   },
   {
-    year: "2024",
-    title: "Découverte de l'IA",
+    year: "2025",
+    title: "Lancement de Woosenteur v2",
     description:
-      "Exploration des technologies IA (ChatGPT, Gemini). Naissance de l'idée de Woosenteur.",
-    icon: Brain,
-  },
-  {
-    year: "2024",
-    title: "Lancement Woosenteur v2",
-    description:
-      "Développement et lancement de l'application SaaS. 25+ avis positifs, note de 4.9/5.",
+      "Développement et mise en ligne de l'application SaaS propulsée par l'IA. 25+ avis positifs, note de 4.9/5.",
     icon: Rocket,
   },
   {
     year: "2025",
-    title: "Expansion des services",
+    title: "Apps Android & Accompagnement IA",
     description:
-      "Développement web, SaaS, apps Android et conception de boutiques e-commerce.",
+      "Développement d'applications Android sur mesure et accompagnement des clients dans l'intégration de l'IA.",
+    icon: Brain,
+  },
+  {
+    year: "2025",
+    title: "Contenu & Réseaux Sociaux",
+    description:
+      "Conception de contenu digital et stratégie réseaux sociaux pour renforcer la visibilité des clients.",
     icon: TrendingUp,
   },
 ];
