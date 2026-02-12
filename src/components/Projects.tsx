@@ -68,7 +68,7 @@ const projects: Project[] = [
     icon: ShoppingBag,
     gradient: "from-blue-600 to-cyan-500",
     category: ["E-commerce"],
-    link: "https://dubai-negoce.fr",
+    link: "https://dubainegoce.fr/",
   },
   {
     title: "Horlogerie de Luxe",
@@ -79,7 +79,7 @@ const projects: Project[] = [
     icon: Watch,
     gradient: "from-amber-600 to-yellow-500",
     category: ["E-commerce"],
-    link: "https://horlogerie-prestige.com",
+    link: "https://studio--studio-6812039012-e620d.us-central1.hosted.app/",
   },
   {
     title: "Sounnah Medecine",
@@ -90,7 +90,7 @@ const projects: Project[] = [
     icon: Leaf,
     gradient: "from-green-600 to-emerald-500",
     category: ["Blog/Éducation"],
-    link: "https://sounnah-medecine.com",
+    link: "https://sounnah-medecine.shop/",
   },
   {
     title: "Innova Thermic",
@@ -101,7 +101,7 @@ const projects: Project[] = [
     icon: Thermometer,
     gradient: "from-orange-600 to-red-500",
     category: ["Site Vitrine"],
-    link: "https://innova-thermic.fr",
+    link: "https://www.innova-thermic.com/",
   },
   {
     title: "Merkez Nafais El Bayan",
@@ -112,7 +112,7 @@ const projects: Project[] = [
     icon: GraduationCap,
     gradient: "from-pink-600 to-rose-500",
     category: ["Blog/Éducation"],
-    link: "https://merkez-nafais.com",
+    link: "https://www.merkez-nafais-el-bayan.com/",
   },
   {
     title: "Niyya Omra",
@@ -123,7 +123,7 @@ const projects: Project[] = [
     icon: Plane,
     gradient: "from-sky-600 to-blue-500",
     category: ["Site Vitrine"],
-    link: "https://niyya-omra.com",
+    link: "https://www.niyyaomra.fr/",
   },
   {
     title: "Atelier Fil Passionata",
@@ -134,7 +134,7 @@ const projects: Project[] = [
     icon: Scissors,
     gradient: "from-fuchsia-600 to-pink-500",
     category: ["E-commerce"],
-    link: "https://atelier-fil-passionata.fr",
+    link: "https://aiguillefilpassionata.fr/",
   },
   {
     title: "AC2FROID",
@@ -145,7 +145,7 @@ const projects: Project[] = [
     icon: Snowflake,
     gradient: "from-cyan-600 to-teal-500",
     category: ["Site Vitrine"],
-    link: "https://ac2froid.fr",
+    link: "https://www.ac2froid.fr/",
   },
   {
     title: "Pause Bien-être",
@@ -156,7 +156,7 @@ const projects: Project[] = [
     icon: Sparkles,
     gradient: "from-purple-600 to-violet-500",
     category: ["Site Vitrine"],
-    link: "https://pause-bien-etre.fr",
+    link: "https://studio--studio-2634978746-f35e1.us-central1.hosted.app/",
   },
   {
     title: "Parfums d'Orient",
@@ -167,7 +167,7 @@ const projects: Project[] = [
     icon: ShoppingCart,
     gradient: "from-indigo-600 to-violet-500",
     category: ["E-commerce"],
-    link: "https://parfums-dorient.fr",
+    link: "https://ouddorient.fr/",
   },
   {
     title: "Une Main pour Demain",
@@ -178,7 +178,7 @@ const projects: Project[] = [
     icon: Globe,
     gradient: "from-teal-600 to-green-500",
     category: ["Site Vitrine"],
-    link: "https://unemainpourdemain.fr",
+    link: "https://unemainpourdemain.blog/",
   },
 ];
 
