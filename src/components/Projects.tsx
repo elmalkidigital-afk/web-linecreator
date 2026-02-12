@@ -68,6 +68,7 @@ const projects: Project[] = [
     icon: ShoppingBag,
     gradient: "from-blue-600 to-cyan-500",
     category: ["E-commerce"],
+    link: "https://dubai-negoce.fr",
   },
   {
     title: "Horlogerie de Luxe",
@@ -78,6 +79,7 @@ const projects: Project[] = [
     icon: Watch,
     gradient: "from-amber-600 to-yellow-500",
     category: ["E-commerce"],
+    link: "https://horlogerie-prestige.com",
   },
   {
     title: "Sounnah Medecine",
@@ -88,6 +90,7 @@ const projects: Project[] = [
     icon: Leaf,
     gradient: "from-green-600 to-emerald-500",
     category: ["Blog/Éducation"],
+    link: "https://sounnah-medecine.com",
   },
   {
     title: "Innova Thermic",
@@ -98,6 +101,7 @@ const projects: Project[] = [
     icon: Thermometer,
     gradient: "from-orange-600 to-red-500",
     category: ["Site Vitrine"],
+    link: "https://innova-thermic.fr",
   },
   {
     title: "Merkez Nafais El Bayan",
@@ -108,6 +112,7 @@ const projects: Project[] = [
     icon: GraduationCap,
     gradient: "from-pink-600 to-rose-500",
     category: ["Blog/Éducation"],
+    link: "https://merkez-nafais.com",
   },
   {
     title: "Niyya Omra",
@@ -118,6 +123,7 @@ const projects: Project[] = [
     icon: Plane,
     gradient: "from-sky-600 to-blue-500",
     category: ["Site Vitrine"],
+    link: "https://niyya-omra.com",
   },
   {
     title: "Atelier Fil Passionata",
@@ -128,6 +134,7 @@ const projects: Project[] = [
     icon: Scissors,
     gradient: "from-fuchsia-600 to-pink-500",
     category: ["E-commerce"],
+    link: "https://atelier-fil-passionata.fr",
   },
   {
     title: "AC2FROID",
@@ -138,6 +145,7 @@ const projects: Project[] = [
     icon: Snowflake,
     gradient: "from-cyan-600 to-teal-500",
     category: ["Site Vitrine"],
+    link: "https://ac2froid.fr",
   },
   {
     title: "Pause Bien-être",
@@ -148,6 +156,7 @@ const projects: Project[] = [
     icon: Sparkles,
     gradient: "from-purple-600 to-violet-500",
     category: ["Site Vitrine"],
+    link: "https://pause-bien-etre.fr",
   },
   {
     title: "Parfums d'Orient",
@@ -158,6 +167,7 @@ const projects: Project[] = [
     icon: ShoppingCart,
     gradient: "from-indigo-600 to-violet-500",
     category: ["E-commerce"],
+    link: "https://parfums-dorient.fr",
   },
   {
     title: "Une Main pour Demain",
@@ -168,6 +178,7 @@ const projects: Project[] = [
     icon: Globe,
     gradient: "from-teal-600 to-green-500",
     category: ["Site Vitrine"],
+    link: "https://unemainpourdemain.fr",
   },
 ];
 
@@ -319,14 +330,8 @@ function ProjectCard({
   project: Project;
   index: number;
 }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
-      className="group relative rounded-2xl p-px overflow-hidden"
-    >
+  const cardContent = (
+    <>
       <div
         className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-40 transition-opacity duration-500`}
       />
@@ -347,7 +352,7 @@ function ProjectCard({
           {project.description}
         </p>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag) => (
             <span
               key={tag}
@@ -357,7 +362,37 @@ function ProjectCard({
             </span>
           ))}
         </div>
+
+        {project.link && (
+          <div className="flex items-center gap-1.5 text-sm text-primary-light group-hover:text-white transition-colors mt-auto">
+            <span>Voir le projet</span>
+            <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </div>
+        )}
       </div>
+    </>
+  );
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
+      className="group relative rounded-2xl p-px overflow-hidden"
+    >
+      {project.link ? (
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block h-full cursor-pointer"
+        >
+          {cardContent}
+        </a>
+      ) : (
+        cardContent
+      )}
     </motion.div>
   );
 }
