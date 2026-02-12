@@ -4,7 +4,7 @@ import { Linkedin, Mail, ArrowUp, Facebook, Phone } from "lucide-react";
 import Image from "next/image";
 
 const LOGO_URL =
-  "https://res.cloudinary.com/dk93srhfb/image/upload/v1770811730/WhatsApp_Image_2026-01-25_at_21.53.32_st6eun.jpg";
+  "https://res.cloudinary.com/dk93srhfb/image/upload/v1770877614/grok_image_1770877529608_iv24ft.jpg";
 
 export default function Footer() {
   return (
@@ -24,7 +24,7 @@ export default function Footer() {
               <span className="font-bold text-gradient">Web-LineCreation</span>
             </div>
             <p className="text-sm text-gray-500 leading-relaxed">
-              Créateur de sites web sur-mesure pour donner vie à vos projets.
+              Concepteur de sites web sur-mesure pour donner vie à vos projets.
             </p>
           </div>
 

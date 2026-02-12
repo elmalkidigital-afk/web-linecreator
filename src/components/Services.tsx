@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import Link from "next/link";
 import {
   Globe,
   Layers,
@@ -19,6 +20,8 @@ const services = [
     features: ["Design responsive", "SEO optimisé", "Performance A+", "Animations fluides"],
     color: "from-violet-500 to-purple-600",
     glowColor: "rgba(139, 92, 246, 0.3)",
+    href: "/services/developpement-web",
+    linkColor: "text-violet-400 hover:text-violet-300",
   },
   {
     icon: Layers,
@@ -28,6 +31,8 @@ const services = [
     features: ["Architecture cloud", "API REST", "Dashboard analytics", "Scalabilité"],
     color: "from-blue-500 to-cyan-500",
     glowColor: "rgba(59, 130, 246, 0.3)",
+    href: "/services/saas",
+    linkColor: "text-blue-400 hover:text-blue-300",
   },
   {
     icon: Smartphone,
@@ -37,15 +42,19 @@ const services = [
     features: ["Material Design", "Push notifications", "APIs intégrées", "Publication Play Store"],
     color: "from-green-500 to-emerald-500",
     glowColor: "rgba(34, 197, 94, 0.3)",
+    href: "/services/android",
+    linkColor: "text-emerald-400 hover:text-emerald-300",
   },
   {
     icon: ShoppingCart,
     title: "Boutique E-commerce",
     description:
-      "Création de boutiques WooCommerce et Shopify clé en main. Import produits, paiements sécurisés, SEO e-commerce et formation incluse.",
+      "Conception de boutiques WooCommerce et Shopify clé en main. Import produits, paiements sécurisés, SEO e-commerce et formation incluse.",
     features: ["WooCommerce / Shopify", "Paiements Stripe/PayPal", "SEO Rank Math", "Formation vidéo"],
     color: "from-orange-500 to-pink-500",
     glowColor: "rgba(249, 115, 22, 0.3)",
+    href: "/services/boutique-woocommerce",
+    linkColor: "text-orange-400 hover:text-orange-300",
   },
 ];
 
@@ -111,7 +120,7 @@ function ServiceCard({
           {service.description}
         </p>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mb-6">
           {service.features.map((feat) => (
             <span
               key={feat}
@@ -121,6 +130,14 @@ function ServiceCard({
             </span>
           ))}
         </div>
+
+        <Link
+          href={service.href}
+          className={`inline-flex items-center gap-2 text-sm font-semibold ${service.linkColor} transition-colors duration-300`}
+        >
+          Découvrir ce service
+          <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+        </Link>
       </div>
     </motion.div>
   );
@@ -145,7 +162,7 @@ export default function Services() {
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-3 mb-5">
             Ce que je peux{" "}
-            <span className="text-gradient">créer pour vous</span>
+            <span className="text-gradient">réaliser pour vous</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Des solutions digitales complètes, du design au déploiement, adaptées

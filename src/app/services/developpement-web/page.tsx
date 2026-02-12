@@ -21,7 +21,7 @@ const features = [
   {
     icon: Palette,
     title: "Design Sur Mesure",
-    description: "Un design unique créé spécialement pour votre marque, pas de template générique.",
+    description: "Un design unique conçu spécialement pour votre marque, pas de template générique.",
   },
   {
     icon: Smartphone,
@@ -145,7 +145,7 @@ const process = [
   {
     step: "02",
     title: "Maquettes & Design",
-    description: "Création du design, choix des couleurs, typographies et mise en page.",
+    description: "Conception du design, choix des couleurs, typographies et mise en page.",
   },
   {
     step: "03",

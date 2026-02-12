@@ -41,7 +41,7 @@ const projects: Project[] = [
     title: "Woosenteur v2",
     subtitle: "Application SaaS IA",
     description:
-      "Un outil que j'ai créé pour les vendeurs de parfums. Il rédige des fiches produits complètes automatiquement. Un gain de temps énorme : ce qui prenait 3 heures se fait maintenant en 3 minutes.",
+      "Un outil que j'ai conçu pour les vendeurs de parfums. Il rédige des fiches produits complètes automatiquement. Un gain de temps énorme : ce qui prenait 3 heures se fait maintenant en 3 minutes.",
     tags: ["SaaS", "Next.js", "IA (Genkit)", "Stripe", "Firebase"],
     stats: [
       { label: "Note", value: "4.9/5" },
@@ -93,7 +93,7 @@ const projects: Project[] = [
     title: "Innova Thermic",
     subtitle: "Site Vitrine",
     description:
-      "Création d'un site vitrine pour une entreprise d'analyse énergétique. L'objectif était de montrer leur expertise et d'être plus visible dans leur région.",
+      "Conception d'un site vitrine pour une entreprise d'analyse énergétique. L'objectif était de montrer leur expertise et d'être plus visible dans leur région.",
     tags: ["WordPress", "Elementor", "SEO Local"],
     icon: Thermometer,
     gradient: "from-orange-600 to-red-500",
@@ -103,7 +103,7 @@ const projects: Project[] = [
     title: "Merkez Nafais El Bayan",
     subtitle: "Plateforme Éducative",
     description:
-      "Création d'une plateforme en ligne pour un centre éducatif, pour qu'ils puissent facilement présenter leurs cours et leurs programmes.",
+      "Réalisation d'une plateforme en ligne pour un centre éducatif, pour qu'ils puissent facilement présenter leurs cours et leurs programmes.",
     tags: ["WordPress", "Flatsome"],
     icon: GraduationCap,
     gradient: "from-pink-600 to-rose-500",
@@ -123,7 +123,7 @@ const projects: Project[] = [
     title: "Atelier Fil Passionata",
     subtitle: "Boutique Artisanale",
     description:
-      "Une boutique en ligne coquette pour une créatrice de talent qui confectionne des accessoires pour bébés. Elle peut maintenant vendre ses créations dans toute la France.",
+      "Une boutique en ligne coquette pour une créatrice de talent. Elle peut maintenant vendre ses créations dans toute la France.",
     tags: ["WordPress", "WooCommerce", "WoodMart"],
     icon: Scissors,
     gradient: "from-fuchsia-600 to-pink-500",
@@ -133,7 +133,7 @@ const projects: Project[] = [
     title: "AC2FROID",
     subtitle: "Artisan Climatisation",
     description:
-      "Création d'un site vitrine pour un artisan spécialisé dans la climatisation, afin de booster sa visibilité locale et de présenter son savoir-faire.",
+      "Conception d'un site vitrine pour un artisan spécialisé dans la climatisation, afin de booster sa visibilité locale et de présenter son savoir-faire.",
     tags: ["WordPress", "Elementor", "SEO Local"],
     icon: Snowflake,
     gradient: "from-cyan-600 to-teal-500",
@@ -143,7 +143,7 @@ const projects: Project[] = [
     title: "Pause Bien-être",
     subtitle: "Spa & Beauté",
     description:
-      "Création d'un site pour un spa et institut de beauté, avec un système de réservation en ligne pour que les clientes puissent prendre rendez-vous quand elles le veulent.",
+      "Conception d'un site pour un spa et institut de beauté, avec un système de réservation en ligne pour que les clientes puissent prendre rendez-vous quand elles le veulent.",
     tags: ["WordPress", "Elementor", "Réservation"],
     icon: Sparkles,
     gradient: "from-purple-600 to-violet-500",
@@ -163,7 +163,7 @@ const projects: Project[] = [
     title: "Une Main pour Demain",
     subtitle: "Site Humanitaire",
     description:
-      "Création du site pour l'association 'Une Main pour Demain', pour mettre en lumière leurs belles actions et encourager les gens à les soutenir.",
+      "Réalisation du site pour l'association 'Une Main pour Demain', pour mettre en lumière leurs belles actions et encourager les gens à les soutenir.",
     tags: ["Site humanitaire", "Firebase Hosting"],
     icon: Globe,
     gradient: "from-teal-600 to-green-500",

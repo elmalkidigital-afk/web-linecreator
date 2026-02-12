@@ -39,7 +39,7 @@ export default function ServicePageLayout({
             }}
           />
         </div>
-        <div className="absolute inset-0 grid-pattern opacity-30" />
+        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
 
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <Link

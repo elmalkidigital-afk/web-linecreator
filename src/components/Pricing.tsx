@@ -90,7 +90,7 @@ export default function Pricing() {
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-3 mb-5">
             Offres{" "}
-            <span className="text-gradient">création de boutique</span>
+            <span className="text-gradient">conception de boutique</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Un tarif juste et transparent, adapté à votre projet. Chaque projet

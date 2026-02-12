@@ -15,7 +15,7 @@ import {
 import Image from "next/image";
 
 const LOGO_URL =
-  "https://res.cloudinary.com/dk93srhfb/image/upload/v1770811730/WhatsApp_Image_2026-01-25_at_21.53.32_st6eun.jpg";
+  "https://res.cloudinary.com/dk93srhfb/image/upload/v1770877614/grok_image_1770877529608_iv24ft.jpg";
 
 const skills = [
   { name: "React / Next.js", level: 95 },
@@ -31,7 +31,7 @@ const milestones = [
     year: "2023",
     title: "Formation E-commerce",
     description:
-      "Certification en création de sites e-commerce. Premiers projets clients.",
+      "Certification en conception de sites e-commerce. Premiers projets clients.",
     icon: Code2,
   },
   {
@@ -52,7 +52,7 @@ const milestones = [
     year: "2025",
     title: "Expansion des services",
     description:
-      "Développement web, SaaS, apps Android et création de boutiques e-commerce.",
+      "Développement web, SaaS, apps Android et conception de boutiques e-commerce.",
     icon: TrendingUp,
   },
 ];
@@ -127,12 +127,12 @@ export default function About() {
               Abderrahmane El Malki
             </h3>
             <p className="text-primary-light mb-6">
-              Développeur Web & Créateur de Woosenteur v2
+              Développeur Web & Concepteur de Woosenteur v2
             </p>
 
             <p className="text-gray-400 leading-relaxed mb-4">
               Passionné par le développement web et les technologies IA, j&apos;ai
-              commencé par une formation en création de sites e-commerce en 2023.
+              commencé par une formation en conception de sites e-commerce en 2023.
               En travaillant sur divers projets, j&apos;ai identifié un problème
               récurrent : la rédaction de fiches produits, un processus long et
               répétitif.
@@ -140,9 +140,7 @@ export default function About() {
             <p className="text-gray-400 leading-relaxed mb-8">
               C&apos;est ainsi qu&apos;est né Woosenteur v2, une application SaaS
               utilisant l&apos;IA pour générer des fiches produits optimisées SEO
-              en moins de 3 minutes. Aujourd&apos;hui, j&apos;accompagne des
-              entrepreneurs et entreprises dans la création de leurs solutions
-              digitales.
+              en moins de 3 minutes.
             </p>
 
             <div className="flex flex-wrap gap-3">

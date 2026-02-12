@@ -53,7 +53,6 @@ const features = [
 const plans = [
   {
     name: "App Simple",
-    price: "999",
     description: "Application basique fonctionnelle",
     features: [
       "3-5 écrans",
@@ -67,7 +66,6 @@ const plans = [
   },
   {
     name: "App Pro",
-    price: "2 499",
     description: "Application complète et performante",
     features: [
       "Tout du pack App Simple",
@@ -81,7 +79,6 @@ const plans = [
   },
   {
     name: "App Avancée",
-    price: "4 999",
     description: "Application complexe sur mesure",
     features: [
       "Tout du pack App Pro",
@@ -95,7 +92,6 @@ const plans = [
   },
   {
     name: "Sur Mesure",
-    price: "Sur devis",
     description: "Projet entièrement personnalisé",
     features: [
       "Tout du pack Avancée",
@@ -314,16 +310,15 @@ export default function AndroidPage() {
                   <div className="mb-6 pt-2">
                     <h3 className="text-lg font-bold text-white mb-1">{plan.name}</h3>
                     <p className="text-xs text-gray-500 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline gap-1">
-                      {plan.price !== "Sur devis" ? (
-                        <>
-                          <span className="text-4xl font-bold text-gradient">{plan.price}</span>
-                          <span className="text-gray-500 text-sm">€ HT</span>
-                        </>
-                      ) : (
-                        <span className="text-2xl font-bold text-gradient">{plan.price}</span>
-                      )}
-                    </div>
+                    <a
+                      href="https://wa.me/212699245542?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20une%20application%20Android."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary-light hover:text-white transition-colors"
+                    >
+                      <MessageCircle className="w-5 h-5" />
+                      <span className="text-2xl font-bold text-gradient">Appelez-moi</span>
+                    </a>
                   </div>
 
                   <div className="space-y-3 flex-1 mb-6">
@@ -337,9 +332,7 @@ export default function AndroidPage() {
 
                   <a
                     href={`https://wa.me/212699245542?text=${encodeURIComponent(
-                      `Bonjour, je suis intéressé par le pack Android ${plan.name}${
-                        plan.price !== "Sur devis" ? ` à ${plan.price}€` : ""
-                      }.`
+                      `Bonjour, je suis intéressé par le pack Android ${plan.name}.`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -358,7 +351,7 @@ export default function AndroidPage() {
           </div>
 
           <p className="text-center text-sm text-gray-500 mt-8">
-            Tous les tarifs sont hors taxes. Maintenance et mises à jour en option.
+            Contactez-moi pour un devis personnalisé. Maintenance et mises à jour en option.
           </p>
         </div>
       </section>
