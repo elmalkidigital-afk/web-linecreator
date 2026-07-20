@@ -47,7 +47,7 @@ const servicePages = [
     href: "/services/maintenance",
     label: "Maintenance",
     icon: Wrench,
-    desc: "50€/mois — tout inclus",
+    desc: "79€/mois — tout inclus",
   },
 ];
 

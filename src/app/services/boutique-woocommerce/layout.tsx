@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Conception Boutique WooCommerce E-commerce",
   description:
-    "Conception de boutiques en ligne WooCommerce professionnelles. WordPress, Stripe, PayPal, SEO optimisé. Développeur e-commerce freelance au Maroc. Devis gratuit.",
+    "Conception de boutiques en ligne WooCommerce professionnelles. WordPress, Stripe, PayPal, SEO optimisé. Développeur e-commerce freelance pour la France, en télétravail. Devis gratuit.",
   keywords: [
     "boutique WooCommerce",
     "conception e-commerce",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "boutique en ligne",
     "Stripe",
     "PayPal",
-    "e-commerce Maroc",
+    "e-commerce France",
   ],
   alternates: {
     canonical: "https://web-linecreator.com/services/boutique-woocommerce",

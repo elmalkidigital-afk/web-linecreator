@@ -16,6 +16,9 @@ import {
   UtensilsCrossed,
   Moon,
   Store,
+  Compass,
+  Building2,
+  HeartHandshake,
 } from "lucide-react";
 
 type Category = "Tous" | "SaaS" | "E-commerce" | "Site Vitrine" | "Blog/Éducation";
@@ -56,6 +59,42 @@ const projects: Project[] = [
     category: ["SaaS"],
     link: "https://hikmaclips.woosenteur.fr/",
     image: "/projects/hikmaclips.png",
+  },
+  {
+    title: "E-sensya & Co",
+    subtitle: "Application Flutter (Android)",
+    description:
+      "Une application native pour les EHPAD et résidences seniors, qui rapproche résidents, familles, équipes et prestataires : messagerie, agenda partagé, réservation de services et notifications, dans une interface douce et accessible. Pensée pour rassurer, conforme RGPD.",
+    tags: ["Flutter", "Android natif", "Multi-rôles", "RGPD"],
+    icon: HeartHandshake,
+    gradient: "from-rose-600 to-pink-500",
+    category: ["SaaS"],
+    link: "https://essentia--essencia-et-co.europe-west4.hosted.app/",
+    image: "/projects/e-sensya.png",
+  },
+  {
+    title: "ImmoGest Pro",
+    subtitle: "Application Android",
+    description:
+      "Une application de gestion locative pour les bailleurs : biens, locataires, baux, suivi des loyers, quittances PDF en un clic et signalement d'incidents. Chaque rôle — propriétaire, gestionnaire, locataire — dispose de son propre espace.",
+    tags: ["Android (APK)", "Firebase", "Gestion locative", "PDF"],
+    icon: Building2,
+    gradient: "from-blue-600 to-indigo-500",
+    category: ["SaaS"],
+    link: "https://immoloyer-6e007.web.app/",
+    image: "/projects/immogest.png",
+  },
+  {
+    title: "RappelAdhan",
+    subtitle: "Application Android",
+    description:
+      "Une application de prière pensée pour le quotidien : horaires précis calculés localement, Qibla, Coran avec trois récitateurs, adhkar et duas — le tout entièrement hors-ligne, sans publicité et gratuit.",
+    tags: ["Android (APK)", "Firebase", "Hors-ligne", "Coran"],
+    icon: Compass,
+    gradient: "from-cyan-600 to-teal-500",
+    category: ["SaaS"],
+    link: "https://rappeladhan.web.app/site",
+    image: "/projects/rappeladhan.png",
   },
   {
     title: "Ch7al",

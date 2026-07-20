@@ -80,7 +80,7 @@ const siteTypes = [
 const plans = [
   {
     name: "One Page",
-    price: "149",
+    price: "490",
     description: "Page unique professionnelle",
     features: [
       "1 page complète",
@@ -94,7 +94,7 @@ const plans = [
   },
   {
     name: "Vitrine",
-    price: "349",
+    price: "990",
     description: "Site vitrine complet",
     features: [
       "5-7 pages",
@@ -108,7 +108,7 @@ const plans = [
   },
   {
     name: "Business",
-    price: "599",
+    price: "1890",
     description: "Site professionnel avancé",
     features: [
       "Tout du pack Vitrine",

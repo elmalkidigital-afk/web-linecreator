@@ -71,7 +71,7 @@ export default function Footer() {
               >
                 +212 699 24 55 42
               </a>
-              <span className="block">Meknès, Maroc</span>
+              <span className="block">France · Télétravail (basé à Meknès)</span>
             </div>
             <div className="flex items-center gap-3 mt-4">
               <a

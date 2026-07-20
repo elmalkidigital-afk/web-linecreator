@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Développement Application Android sur Mesure",
   description:
-    "Conception d'applications Android natives et cross-platform. Design Material Design, publication Play Store, notifications push. Développeur freelance au Maroc. Appelez-moi pour un devis.",
+    "Conception d'applications Android natives et cross-platform. Design Material Design, publication Play Store, notifications push. Développeur freelance confirmé pour la France, en télétravail. Contactez-moi pour un devis.",
   keywords: [
     "application Android",
     "développement mobile",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "React Native",
     "Kotlin",
     "Play Store",
-    "application mobile Maroc",
+    "application mobile France",
     "freelance mobile",
   ],
   alternates: {

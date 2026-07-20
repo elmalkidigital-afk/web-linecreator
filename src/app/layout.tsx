@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -15,14 +21,15 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://web-linecreator.com"),
   title: {
-    default: "Abderrahmane El Malki | Développeur Web Freelance, SaaS & Apps au Maroc",
+    default: "Abderrahmane El Malki | Développeur Web Freelance SaaS & Apps — France",
     template: "%s | Web-LineCreator",
   },
   description:
-    "Développeur web freelance au Maroc spécialisé en conception de sites web, applications SaaS, apps Android et boutiques WooCommerce. Concepteur de Woosenteur. Contactez-moi pour un devis gratuit.",
+    "Développeur web freelance confirmé pour la France : conception de sites web, applications SaaS, apps Android et boutiques WooCommerce. Concepteur de Woosenteur. Missions en régie (TJM) ou au forfait, en télétravail. Devis gratuit.",
   keywords: [
     "développeur web freelance",
-    "développeur web Maroc",
+    "développeur web France",
+    "développeur freelance France",
     "conception site web",
     "application SaaS",
     "application Android",
@@ -30,7 +37,8 @@ export const metadata: Metadata = {
     "e-commerce",
     "Next.js",
     "React",
-    "freelance Maroc",
+    "freelance France",
+    "TJM développeur freelance",
     "développeur fullstack",
     "conception application mobile",
     "site vitrine",
@@ -108,7 +116,7 @@ export default function RootLayout({
               image:
                 "https://res.cloudinary.com/dk93srhfb/image/upload/v1770877614/grok_image_1770877529608_iv24ft.jpg",
               description:
-                "Développeur web freelance au Maroc spécialisé en conception de sites web, applications SaaS, apps Android et boutiques WooCommerce.",
+                "Développeur web freelance confirmé pour la France, spécialisé en conception de sites web, applications SaaS, apps Android et boutiques WooCommerce. Missions en régie ou au forfait, en télétravail.",
               founder: {
                 "@type": "Person",
                 name: "Abderrahmane El Malki",
@@ -134,7 +142,7 @@ export default function RootLayout({
               ],
               areaServed: {
                 "@type": "Country",
-                name: "Morocco",
+                name: "France",
               },
               priceRange: "$$",
               knowsAbout: [
@@ -152,7 +160,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${inter.variable} ${jetbrainsMono.variable} ${spaceGrotesk.variable} antialiased`}
       >
         {children}
       </body>

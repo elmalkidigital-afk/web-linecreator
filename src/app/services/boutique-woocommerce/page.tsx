@@ -53,7 +53,7 @@ const features = [
 const plans = [
   {
     name: "Starter",
-    price: "229",
+    price: "890",
     capacity: "1-10 produits",
     description: "Idéal pour démarrer votre activité en ligne",
     features: [
@@ -69,7 +69,7 @@ const plans = [
   },
   {
     name: "Croissance",
-    price: "399",
+    price: "1590",
     capacity: "10-100 produits",
     description: "Pour développer votre boutique sérieusement",
     features: [
@@ -84,7 +84,7 @@ const plans = [
   },
   {
     name: "Catalogue",
-    price: "699",
+    price: "2490",
     capacity: "100-300 produits",
     description: "Pour les catalogues importants",
     features: [

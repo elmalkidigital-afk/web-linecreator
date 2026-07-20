@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Développement Application SaaS sur Mesure",
   description:
-    "Conception d'applications SaaS personnalisées avec Next.js, React, Firebase et IA. Du MVP au produit scalable. Développeur freelance au Maroc. Appelez-moi pour un devis gratuit.",
+    "Conception d'applications SaaS personnalisées avec Next.js, React, Firebase et IA. Du MVP au produit scalable. Développeur freelance confirmé pour la France, en télétravail. Contactez-moi pour un devis gratuit.",
   keywords: [
     "application SaaS",
     "développement SaaS",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Next.js",
     "Firebase",
     "application web",
-    "freelance SaaS Maroc",
+    "freelance SaaS France",
   ],
   alternates: {
     canonical: "https://web-linecreator.com/services/saas",

@@ -26,6 +26,13 @@
   --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
+}
+
+.font-display,
+h1,
+h2 {
+  font-family: var(--font-display), var(--font-geist-sans), sans-serif;
 }
 
 * {
@@ -35,7 +42,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+  font-family: var(--font-geist-sans, ui-sans-serif, system-ui, sans-serif);
   overflow-x: hidden;
 }
 
@@ -115,6 +122,60 @@ body {
     linear-gradient(rgba(124, 58, 237, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(124, 58, 237, 0.05) 1px, transparent 1px);
   background-size: 60px 60px;
+}
+
+/* Hero grid with radial fade */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(124, 58, 237, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.07) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: radial-gradient(ellipse 75% 65% at 50% 32%, #000 35%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 32%, #000 35%, transparent 100%);
+}
+
+/* Conic spotlight glow behind hero headline */
+.hero-glow {
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(124, 58, 237, 0.18),
+    rgba(59, 130, 246, 0.14),
+    rgba(167, 139, 250, 0.16),
+    rgba(124, 58, 237, 0.18)
+  );
+  filter: blur(90px);
+  animation: spin-slow 22s linear infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Animated shine sweep for CTA */
+@keyframes shine {
+  0% { transform: translateX(-120%); }
+  60%, 100% { transform: translateX(220%); }
+}
+
+.animate-shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: translateX(-120%);
+  animation: shine 4.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow,
+  .animate-shine::after,
+  .gradient-bg {
+    animation: none;
+  }
 }
 
 /* Projects slider (marquee) */

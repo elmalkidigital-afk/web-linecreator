@@ -53,6 +53,7 @@ const features = [
 const plans = [
   {
     name: "App Simple",
+    price: "2 900",
     description: "Application basique fonctionnelle",
     features: [
       "3-5 écrans",
@@ -66,6 +67,7 @@ const plans = [
   },
   {
     name: "App Pro",
+    price: "5 900",
     description: "Application complète et performante",
     features: [
       "Tout du pack App Simple",
@@ -79,6 +81,7 @@ const plans = [
   },
   {
     name: "App Avancée",
+    price: "9 900",
     description: "Application complexe sur mesure",
     features: [
       "Tout du pack App Pro",
@@ -92,6 +95,7 @@ const plans = [
   },
   {
     name: "Sur Mesure",
+    price: "Sur devis",
     description: "Projet entièrement personnalisé",
     features: [
       "Tout du pack Avancée",
@@ -310,15 +314,15 @@ export default function AndroidPage() {
                   <div className="mb-6 pt-2">
                     <h3 className="text-lg font-bold text-white mb-1">{plan.name}</h3>
                     <p className="text-xs text-gray-500 mb-4">{plan.description}</p>
-                    <a
-                      href="https://wa.me/212699245542?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20une%20application%20Android."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-primary-light hover:text-white transition-colors"
-                    >
-                      <MessageCircle className="w-5 h-5" />
-                      <span className="text-2xl font-bold text-gradient">Appelez-moi</span>
-                    </a>
+                    {plan.price === "Sur devis" ? (
+                      <span className="text-2xl font-bold text-gradient">Sur devis</span>
+                    ) : (
+                      <div className="flex items-baseline gap-1.5">
+                        <span className="text-xs text-gray-500">à partir de</span>
+                        <span className="text-4xl font-bold text-gradient">{plan.price}</span>
+                        <span className="text-gray-500 text-sm">€ HT</span>
+                      </div>
+                    )}
                   </div>
 
                   <div className="space-y-3 flex-1 mb-6">

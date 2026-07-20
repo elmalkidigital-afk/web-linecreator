@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Maintenance & Support Web Mensuel",
   description:
-    "Service de maintenance web mensuel : mises à jour WordPress, sauvegardes, monitoring 24/7, corrections de bugs et sécurité. Sans engagement. Développeur freelance au Maroc.",
+    "Service de maintenance web mensuel : mises à jour WordPress, sauvegardes, monitoring 24/7, corrections de bugs et sécurité. Sans engagement. Développeur freelance pour la France, en télétravail.",
   keywords: [
     "maintenance web",
     "support web",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "sauvegarde site",
     "monitoring web",
     "sécurité web",
-    "maintenance Maroc",
+    "maintenance web France",
   ],
   alternates: {
     canonical: "https://web-linecreator.com/services/maintenance",

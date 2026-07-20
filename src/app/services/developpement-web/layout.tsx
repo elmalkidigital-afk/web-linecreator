@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Conception Site Web Professionnel sur Mesure",
   description:
-    "Conception de sites web professionnels : site vitrine, one page, site business multilangue. Design moderne, SEO optimisé. Développeur web freelance au Maroc.",
+    "Conception de sites web professionnels : site vitrine, one page, site business multilangue. Design moderne, SEO optimisé. Développeur web freelance confirmé pour la France, en télétravail.",
   keywords: [
     "conception site web",
     "site vitrine",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "site one page",
     "site multilangue",
     "web design",
-    "freelance web Maroc",
+    "freelance web France",
   ],
   alternates: {
     canonical: "https://web-linecreator.com/services/developpement-web",

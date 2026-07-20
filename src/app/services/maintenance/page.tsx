@@ -110,7 +110,7 @@ export default function MaintenancePage() {
               </div>
 
               <div className="flex items-baseline justify-center gap-2 mb-4">
-                <span className="text-6xl md:text-8xl font-bold text-gradient">50</span>
+                <span className="text-6xl md:text-8xl font-bold text-gradient">79</span>
                 <div className="text-left">
                   <span className="text-2xl font-bold text-white">€</span>
                   <span className="text-gray-400 text-sm block">HT / mois</span>
@@ -122,7 +122,7 @@ export default function MaintenancePage() {
               </p>
 
               <a
-                href="https://wa.me/212699245542?text=Bonjour, je suis intéressé par votre offre de maintenance à 50€/mois."
+                href="https://wa.me/212699245542?text=Bonjour, je suis intéressé par votre offre de maintenance à 79€/mois."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-gradient-to-br from-amber-500 to-orange-500 text-white px-8 py-4 rounded-full font-medium hover:opacity-90 transition-opacity text-lg"
