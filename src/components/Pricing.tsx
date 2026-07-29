@@ -141,7 +141,7 @@ export default function Pricing() {
                         <span className="text-4xl font-bold text-gradient">
                           {plan.price}
                         </span>
-                        <span className="text-gray-500 text-sm">€ HT</span>
+                        <span className="text-gray-500 text-sm">€ TTC</span>
                       </>
                     ) : (
                       <span className="text-2xl font-bold text-gradient">

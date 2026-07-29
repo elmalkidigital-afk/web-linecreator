@@ -381,7 +381,7 @@ export default function SaaSPage() {
                       <div className="flex items-baseline gap-1.5">
                         <span className="text-xs text-gray-500">à partir de</span>
                         <span className="text-4xl font-bold text-gradient">{plan.price}</span>
-                        <span className="text-gray-500 text-sm">€ HT</span>
+                        <span className="text-gray-500 text-sm">€ TTC</span>
                       </div>
                     )}
                   </div>

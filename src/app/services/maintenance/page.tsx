@@ -113,7 +113,7 @@ export default function MaintenancePage() {
                 <span className="text-6xl md:text-8xl font-bold text-gradient">79</span>
                 <div className="text-left">
                   <span className="text-2xl font-bold text-white">€</span>
-                  <span className="text-gray-400 text-sm block">HT / mois</span>
+                  <span className="text-gray-400 text-sm block">TTC / mois</span>
                 </div>
               </div>
 

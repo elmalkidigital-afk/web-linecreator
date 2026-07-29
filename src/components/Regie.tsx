@@ -125,7 +125,7 @@ export default function Regie() {
                     <span className="text-4xl font-bold text-gradient">
                       {rate.tjm}
                     </span>
-                    <span className="text-gray-500 text-sm">€ / jour HT</span>
+                    <span className="text-gray-500 text-sm">€ / jour TTC</span>
                   </div>
                 </div>
 
@@ -165,7 +165,7 @@ export default function Regie() {
           transition={{ delay: 0.5 }}
           className="text-center text-sm text-gray-500 mt-10"
         >
-          TJM HT — dégressif sur les missions longues · télétravail (France
+          TJM TTC — dégressif sur les missions longues · télétravail (France
           entière) · régie ou forfait au choix.
         </motion.p>
       </div>
