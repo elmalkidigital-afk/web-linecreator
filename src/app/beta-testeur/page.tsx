@@ -1,17 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import {
+  onAuthStateChanged,
+  signInWithPopup,
+  signOut,
+  type User,
+} from "firebase/auth";
 import {
   ArrowLeft,
   ArrowRight,
   Check,
   ExternalLink,
   LogIn,
+  LogOut,
   Clock,
   Download,
   Gift,
   Send,
+  Lock,
   BookOpen,
   Compass,
   Store,
@@ -23,13 +31,14 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { auth, googleProvider } from "@/lib/firebase";
 
 const steps = [
   {
     icon: LogIn,
     title: "Connectez-vous en Google",
     description:
-      "Un compte Gmail est obligatoire : c'est lui que Google utilise pour vous donner accès à la version test de l'application.",
+      "Un compte Gmail est obligatoire : connectez-vous ci-dessus, c'est ce compte que Google utilise pour vous donner accès à la version test.",
   },
   {
     icon: ExternalLink,
@@ -109,11 +118,38 @@ const apps = [
 ];
 
 export default function BetaTesteurPage() {
+  const [user, setUser] = useState<User | null>(null);
+  const [authLoading, setAuthLoading] = useState(true);
+  const [signingIn, setSigningIn] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     app: apps[0].name,
     message: "",
   });
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (u) => {
+      setUser(u);
+      setAuthLoading(false);
+      if (u?.displayName) {
+        setFormData((prev) => ({ ...prev, name: u.displayName ?? prev.name }));
+      }
+    });
+    return () => unsubscribe();
+  }, []);
+
+  const handleGoogleSignIn = async () => {
+    setSigningIn(true);
+    try {
+      await signInWithPopup(auth, googleProvider);
+    } catch {
+      // L'utilisateur a fermé la popup ou une erreur réseau est survenue.
+    } finally {
+      setSigningIn(false);
+    }
+  };
+
+  const handleSignOut = () => signOut(auth);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -132,7 +168,7 @@ export default function BetaTesteurPage() {
         <div className="max-w-4xl mx-auto">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors mb-8"
+            className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors mb-8 w-fit"
           >
             <ArrowLeft className="w-4 h-4" />
             Retour à l&apos;accueil
@@ -151,11 +187,58 @@ export default function BetaTesteurPage() {
             lancement.
           </p>
 
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 text-sm font-medium px-4 py-2 rounded-full mb-14">
+          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 text-sm font-medium px-4 py-2 rounded-full mb-8">
             <Gift className="w-4 h-4" />
             En vous remerciant : vous gardez l&apos;accès aux applications
             testées, même après leur sortie officielle.
           </div>
+
+          {/* Connexion Google obligatoire */}
+          {!authLoading && !user && (
+            <div className="relative rounded-2xl overflow-hidden p-px mb-14">
+              <div className="absolute inset-0 bg-gradient-to-br from-violet-600 to-blue-600 opacity-40" />
+              <div className="relative bg-surface rounded-2xl p-8 text-center">
+                <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center mx-auto mb-4">
+                  <Lock className="w-6 h-6 text-white" />
+                </div>
+                <h2 className="text-xl font-bold text-white mb-2">
+                  Connexion Google requise
+                </h2>
+                <p className="text-sm text-gray-400 max-w-md mx-auto mb-6">
+                  La liste des applications à tester et le formulaire ne sont
+                  accessibles qu&apos;après connexion avec votre compte Gmail
+                  — c&apos;est ce même compte qui vous servira à rejoindre les
+                  tests sur Google Play.
+                </p>
+                <button
+                  onClick={handleGoogleSignIn}
+                  disabled={signingIn}
+                  className="inline-flex items-center gap-2 bg-gradient-primary text-white px-6 py-3 rounded-full font-medium hover:opacity-90 transition-opacity glow-purple disabled:opacity-60"
+                >
+                  <LogIn className="w-4 h-4" />
+                  {signingIn ? "Connexion..." : "Se connecter avec Google"}
+                </button>
+              </div>
+            </div>
+          )}
+
+          {user && (
+            <div className="flex items-center justify-between glass rounded-xl px-5 py-3 mb-14">
+              <span className="text-sm text-gray-300">
+                Connecté en tant que{" "}
+                <span className="text-white font-medium">
+                  {user.displayName ?? user.email}
+                </span>
+              </span>
+              <button
+                onClick={handleSignOut}
+                className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-white transition-colors"
+              >
+                <LogOut className="w-3.5 h-3.5" />
+                Se déconnecter
+              </button>
+            </div>
+          )}
 
           {/* Steps */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
@@ -185,6 +268,8 @@ export default function BetaTesteurPage() {
           </div>
 
           {/* Apps grid */}
+          {user && (
+            <>
           <h2 className="text-2xl font-bold text-white mb-2">
             Applications à tester
           </h2>
@@ -313,6 +398,8 @@ export default function BetaTesteurPage() {
             Vos retours sont transmis directement par WhatsApp, sans aucun
             stockage sur ce site.
           </p>
+            </>
+          )}
         </div>
       </section>
 

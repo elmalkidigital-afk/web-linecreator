@@ -147,7 +147,7 @@ export default function ConfidentialitePage() {
         <div className="max-w-3xl mx-auto">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors mb-8"
+            className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors mb-8 w-fit"
           >
             <ArrowLeft className="w-4 h-4" />
             Retour à l&apos;accueil
