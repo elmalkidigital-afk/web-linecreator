@@ -19,6 +19,7 @@ import {
   Compass,
   Building2,
   HeartHandshake,
+  KeyRound,
 } from "lucide-react";
 
 type Category = "Tous" | "SaaS" | "E-commerce" | "Site Vitrine" | "Blog/Éducation";
@@ -95,6 +96,18 @@ const projects: Project[] = [
     category: ["SaaS"],
     link: "https://rappeladhan.web.app/site",
     image: "/projects/rappeladhan.png",
+  },
+  {
+    title: "UrbanKey",
+    subtitle: "Application Escape Game",
+    description:
+      "Une application d'escape games grandeur nature en pleine ville : les joueurs suivent un parcours d'énigmes dans les rues de Marrakech, Fès, Séville ou Meknès pour percer les secrets cachés du lieu. Parcours solo, famille, groupe ou entreprise, notés et classés.",
+    tags: ["Application Web", "Firebase", "Gamification", "Géolocalisation"],
+    icon: KeyRound,
+    gradient: "from-amber-700 to-yellow-600",
+    category: ["SaaS"],
+    link: "https://urbankey--urban-key2.europe-west4.hosted.app/discover",
+    image: "/projects/urban-key.png",
   },
   {
     title: "Ch7al",

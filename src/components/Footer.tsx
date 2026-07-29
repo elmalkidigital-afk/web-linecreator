@@ -2,6 +2,7 @@
 
 import { Linkedin, Mail, ArrowUp, Facebook, Phone } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const LOGO_URL =
   "https://res.cloudinary.com/dk93srhfb/image/upload/v1770877614/grok_image_1770877529608_iv24ft.jpg";
@@ -114,9 +115,17 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-border/50 text-center text-xs text-gray-600">
-          &copy; {new Date().getFullYear()} Web-LineCreation par Abderrahmane El
-          Malki. Tous droits réservés.
+        <div className="pt-8 border-t border-border/50 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center text-xs text-gray-600">
+          <span>
+            &copy; {new Date().getFullYear()} Web-LineCreation par
+            Abderrahmane El Malki. Tous droits réservés.
+          </span>
+          <Link
+            href="/confidentialite"
+            className="hover:text-white transition-colors"
+          >
+            Politique de confidentialité
+          </Link>
         </div>
       </div>
     </footer>
