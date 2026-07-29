@@ -79,53 +79,39 @@ const siteTypes = [
 
 const plans = [
   {
-    name: "One Page",
-    price: "490",
-    description: "Page unique professionnelle",
+    name: "Vitrine",
+    price: "300",
+    description: "Idéal pour les artisans et petites structures",
     features: [
-      "1 page complète",
-      "Design responsive",
-      "Formulaire de contact",
+      "Landing + page Contact",
+      "3 pages",
+      "Fiche établissement Google",
       "SEO de base",
-      "Hébergement 1 an",
+      "Design responsive",
       "Certificat SSL",
     ],
     popular: false,
   },
   {
-    name: "Vitrine",
-    price: "990",
-    description: "Site vitrine complet",
+    name: "Vitrine Pro",
+    price: "600",
+    description: "Pour PME et artisans qui veulent se démarquer",
     features: [
-      "5-7 pages",
+      "Landing + page Contact",
+      "5 pages",
+      "Chatbot IA intégré",
+      "SEO poussé",
+      "Fiche établissement Google",
       "Design sur mesure",
-      "Blog intégré",
-      "SEO avancé Rank Math",
-      "Google Analytics",
-      "Formation 30 min",
     ],
     popular: true,
   },
   {
-    name: "Business",
-    price: "1890",
-    description: "Site professionnel avancé",
-    features: [
-      "Tout du pack Vitrine",
-      "10-15 pages",
-      "Multi-langues",
-      "Animations avancées",
-      "Performance optimisée",
-      "Support 3 mois",
-    ],
-    popular: false,
-  },
-  {
     name: "Sur Mesure",
     price: "Sur devis",
-    description: "Projet web complexe",
+    description: "Projet web complexe, sur devis",
     features: [
-      "Tout du pack Business",
+      "Tout du pack Vitrine Pro",
       "Pages illimitées",
       "Fonctionnalités custom",
       "Intégrations API",
@@ -298,7 +284,7 @@ export default function DevWebPage() {
             Des prix justes pour un travail de qualité.
           </p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-3 gap-6">
             {plans.map((plan, i) => (
               <motion.div
                 key={plan.name}
@@ -327,9 +313,10 @@ export default function DevWebPage() {
                   <div className="mb-6 pt-2">
                     <h3 className="text-lg font-bold text-white mb-1">{plan.name}</h3>
                     <p className="text-xs text-gray-500 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline gap-1">
+                    <div className="flex items-baseline gap-1.5">
                       {plan.price !== "Sur devis" ? (
                         <>
+                          <span className="text-xs text-gray-500">à partir de</span>
                           <span className="text-4xl font-bold text-gradient">{plan.price}</span>
                           <span className="text-gray-500 text-sm">€ TTC</span>
                         </>
@@ -371,7 +358,7 @@ export default function DevWebPage() {
           </div>
 
           <p className="text-center text-sm text-gray-500 mt-8">
-            Tous les tarifs sont hors taxes. Maintenance mensuelle disponible en option.
+            Tous les tarifs sont TTC. Maintenance mensuelle disponible en option.
           </p>
         </div>
       </section>

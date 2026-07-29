@@ -52,61 +52,43 @@ const features = [
 
 const plans = [
   {
-    name: "Starter",
-    price: "890",
-    capacity: "1-10 produits",
-    description: "Idéal pour démarrer votre activité en ligne",
+    name: "Standard",
+    price: "600",
+    capacity: "Jusqu'à 50 produits",
+    description: "Pour lancer votre boutique en ligne",
     features: [
       "Domaine + hébergement (1 an)",
       "WordPress / WooCommerce",
-      "Thème responsive optimisé",
       "Paiement Stripe/PayPal",
-      "Intégration Woosenteur IA",
-      "SEO de base Rank Math",
-      "1 session de formation",
+      "Fiches produit optimisées",
+      "SEO de base",
+      "Design responsive",
     ],
     popular: false,
   },
   {
-    name: "Croissance",
-    price: "1590",
-    capacity: "10-100 produits",
-    description: "Pour développer votre boutique sérieusement",
+    name: "Pro",
+    price: "800",
+    capacity: "+100 produits",
+    description: "Pour les catalogues plus importants",
     features: [
-      "Tout du pack Starter",
+      "Tout du pack Standard",
+      "SEO poussé",
+      "Fiche établissement Google Search Console",
+      "Fiches produit optimisées premium",
       "Structure de catégories avancée",
-      "Filtres de recherche basiques",
-      "SEO avancé Rank Math",
-      "Formation 45 minutes",
-      "Support prioritaire 30 jours",
+      "Formation approfondie",
     ],
     popular: true,
   },
   {
-    name: "Catalogue",
-    price: "2490",
-    capacity: "100-300 produits",
-    description: "Pour les catalogues importants",
-    features: [
-      "Tout du pack Croissance",
-      "Import CSV produits",
-      "Filtres avancés multi-critères",
-      "Optimisation vitesse",
-      "Sécurité renforcée",
-      "Formation approfondie",
-      "Maintenance 3 mois incluse",
-    ],
-    popular: false,
-  },
-  {
     name: "Sur-mesure",
     price: "Sur devis",
-    capacity: "300+ produits",
-    description: "Solution entièrement personnalisée",
+    capacity: "Sur devis, après un appel",
+    description: "Réservons un appel pour discuter de votre projet",
     features: [
-      "Tout du pack Catalogue",
+      "Tout du pack Pro",
       "Produits illimités",
-      "Sync stock complexe",
       "Fonctionnalités sur mesure",
       "Design 100% custom",
       "Accompagnement stratégique",
@@ -230,7 +212,7 @@ export default function BoutiqueWoocommerce() {
             Chaque projet est unique, donc chaque tarif l&apos;est aussi. Pas de frais cachés.
           </p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-3 gap-6">
             {plans.map((plan, i) => (
               <motion.div
                 key={plan.name}
@@ -259,9 +241,10 @@ export default function BoutiqueWoocommerce() {
                   <div className="mb-6 pt-2">
                     <h3 className="text-lg font-bold text-white mb-1">{plan.name}</h3>
                     <p className="text-xs text-gray-500 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline gap-1">
+                    <div className="flex items-baseline gap-1.5">
                       {plan.price !== "Sur devis" ? (
                         <>
+                          <span className="text-xs text-gray-500">à partir de</span>
                           <span className="text-4xl font-bold text-gradient">{plan.price}</span>
                           <span className="text-gray-500 text-sm">€ TTC</span>
                         </>
@@ -304,7 +287,7 @@ export default function BoutiqueWoocommerce() {
           </div>
 
           <p className="text-center text-sm text-gray-500 mt-8">
-            Tous les tarifs sont hors taxes. Option maintenance mensuelle disponible.
+            Tous les tarifs sont TTC. Option maintenance mensuelle disponible.
           </p>
         </div>
       </section>

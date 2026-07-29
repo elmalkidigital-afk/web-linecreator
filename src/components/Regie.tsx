@@ -7,7 +7,7 @@ import { Check, Zap, MessageCircle, Code2, Sparkles, Smartphone } from "lucide-r
 const rates = [
   {
     name: "Développement Web",
-    tjm: "400",
+    tjm: "50",
     icon: Code2,
     description: "Intégration & développement front/back",
     features: [
@@ -20,7 +20,7 @@ const rates = [
   },
   {
     name: "SaaS + IA",
-    tjm: "500",
+    tjm: "45",
     icon: Sparkles,
     description: "Ma spécialité : du MVP à la production",
     features: [
@@ -33,7 +33,7 @@ const rates = [
   },
   {
     name: "Application Android",
-    tjm: "450",
+    tjm: "40",
     icon: Smartphone,
     description: "Applications mobiles natives",
     features: [

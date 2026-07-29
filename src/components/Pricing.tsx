@@ -6,62 +6,47 @@ import { Check, Zap, MessageCircle } from "lucide-react";
 
 const plans = [
   {
-    name: "Starter",
-    price: "890",
-    capacity: "1-10 produits",
-    description: "Idéal pour démarrer votre activité en ligne",
+    name: "Standard",
+    price: "600",
+    capacity: "Jusqu'à 50 produits",
+    description: "Pour lancer votre boutique en ligne",
     features: [
-      "Domaine + hébergement",
+      "Domaine + hébergement (1 an)",
       "WordPress / WooCommerce",
-      "Design responsive",
       "Paiement Stripe/PayPal",
-      "SEO de base Rank Math",
-      "1 session de formation",
+      "Fiches produit optimisées",
+      "SEO de base",
+      "Design responsive",
     ],
     popular: false,
   },
   {
-    name: "Growth",
-    price: "1590",
-    capacity: "10-100 produits",
-    description: "Pour développer votre boutique sérieusement",
+    name: "Pro",
+    price: "800",
+    capacity: "+100 produits",
+    description: "Pour les catalogues plus importants",
     features: [
-      "Tout du pack Starter",
-      "Import CSV produits",
-      "Filtres & recherche avancés",
-      "SEO avancé Rank Math",
-      "2 sessions de formation",
-      "Support prioritaire 30j",
+      "Tout du pack Standard",
+      "SEO poussé",
+      "Fiche établissement Google Search Console",
+      "Fiches produit optimisées premium",
+      "Structure de catégories avancée",
+      "Formation approfondie",
     ],
     popular: true,
   },
   {
-    name: "Catalog",
-    price: "2490",
-    capacity: "100-300 produits",
-    description: "Pour les catalogues importants",
-    features: [
-      "Tout du pack Growth",
-      "Import massif produits",
-      "Performance optimisée",
-      "SEO expert complet",
-      "3 sessions de formation vidéo",
-      "Maintenance 3 mois incluse",
-    ],
-    popular: false,
-  },
-  {
-    name: "Custom",
+    name: "Sur-mesure",
     price: "Sur devis",
-    capacity: "300+ produits",
-    description: "Solution entièrement sur mesure",
+    capacity: "Sur devis, après un appel",
+    description: "Réservons un appel pour discuter de votre projet",
     features: [
-      "Tout du pack Catalog",
-      "Architecture sur mesure",
-      "Intégrations personnalisées",
-      "Design UI/UX custom",
-      "Formation illimitée",
-      "Maintenance & reporting",
+      "Tout du pack Pro",
+      "Produits illimités",
+      "Fonctionnalités sur mesure",
+      "Design 100% custom",
+      "Accompagnement stratégique",
+      "Support prioritaire",
     ],
     popular: false,
   },
@@ -98,7 +83,7 @@ export default function Pricing() {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-3 gap-6">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -135,9 +120,10 @@ export default function Pricing() {
                   <p className="text-xs text-gray-500 mb-4">
                     {plan.description}
                   </p>
-                  <div className="flex items-baseline gap-1">
+                  <div className="flex items-baseline gap-1.5">
                     {plan.price !== "Sur devis" ? (
                       <>
+                        <span className="text-xs text-gray-500">à partir de</span>
                         <span className="text-4xl font-bold text-gradient">
                           {plan.price}
                         </span>
@@ -193,7 +179,7 @@ export default function Pricing() {
           className="text-center mt-10"
         >
           <p className="text-sm text-gray-500 mb-4">
-            Tous les tarifs sont hors taxes. Maintenance mensuelle disponible en
+            Tous les tarifs sont TTC. Maintenance mensuelle disponible en
             option.
           </p>
           <a
