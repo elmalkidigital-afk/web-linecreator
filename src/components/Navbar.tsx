@@ -15,8 +15,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-const LOGO_URL =
-  "https://res.cloudinary.com/dk93srhfb/image/upload/v1770877614/grok_image_1770877529608_iv24ft.jpg";
+const LOGO_URL = "/logo-icon.png";
 
 const servicePages = [
   {
@@ -100,9 +99,9 @@ export default function Navbar() {
           <Image
             src={LOGO_URL}
             alt="Web-LineCreation Logo"
-            width={40}
+            width={88}
             height={40}
-            className="rounded-xl group-hover:scale-110 transition-transform"
+            className="group-hover:scale-110 transition-transform"
           />
           <span className="text-lg font-bold text-gradient hidden sm:inline">
             Web-LineCreation

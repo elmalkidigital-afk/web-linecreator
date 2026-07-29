@@ -14,8 +14,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
-const LOGO_URL =
-  "https://res.cloudinary.com/dk93srhfb/image/upload/v1770877614/grok_image_1770877529608_iv24ft.jpg";
+const LOGO_URL = "/logo-full.png";
 
 const skills = [
   { name: "React / Next.js", level: 95 },
@@ -117,10 +116,10 @@ export default function About() {
             {/* Logo */}
             <Image
               src={LOGO_URL}
-              alt="Abderrahmane El Malki"
-              width={96}
+              alt="Web-LineCreation — Abderrahmane El Malki"
+              width={118}
               height={96}
-              className="rounded-2xl mb-8 glow-purple"
+              className="mb-8 glow-purple"
             />
 
             <h3 className="text-2xl font-bold text-white mb-2">

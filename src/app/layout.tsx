@@ -64,10 +64,10 @@ export const metadata: Metadata = {
     siteName: "Web-LineCreator",
     images: [
       {
-        url: "https://res.cloudinary.com/dk93srhfb/image/upload/v1770877614/grok_image_1770877529608_iv24ft.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Web-LineCreator - Développeur Web Freelance",
+        alt: "Web-LineCreation - Développeur Web Freelance",
       },
     ],
   },
@@ -76,9 +76,7 @@ export const metadata: Metadata = {
     title: "Abderrahmane El Malki | Développeur Web Freelance",
     description:
       "Développeur web freelance spécialisé en conception de sites, SaaS, apps Android et boutiques e-commerce.",
-    images: [
-      "https://res.cloudinary.com/dk93srhfb/image/upload/v1770877614/grok_image_1770877529608_iv24ft.jpg",
-    ],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -112,9 +110,8 @@ export default function RootLayout({
               "@type": "ProfessionalService",
               name: "Web-LineCreator",
               url: "https://web-linecreator.com",
-              logo: "https://res.cloudinary.com/dk93srhfb/image/upload/v1770877614/grok_image_1770877529608_iv24ft.jpg",
-              image:
-                "https://res.cloudinary.com/dk93srhfb/image/upload/v1770877614/grok_image_1770877529608_iv24ft.jpg",
+              logo: "https://web-linecreator.com/logo-full.png",
+              image: "https://web-linecreator.com/og-image.png",
               description:
                 "Développeur web freelance confirmé pour la France, spécialisé en conception de sites web, applications SaaS, apps Android et boutiques WooCommerce. Missions en régie ou au forfait, en télétravail.",
               founder: {

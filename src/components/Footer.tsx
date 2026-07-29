@@ -4,8 +4,7 @@ import { Linkedin, Mail, ArrowUp, Facebook, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const LOGO_URL =
-  "https://res.cloudinary.com/dk93srhfb/image/upload/v1770877614/grok_image_1770877529608_iv24ft.jpg";
+const LOGO_URL = "/logo-icon.png";
 
 export default function Footer() {
   return (
@@ -18,9 +17,8 @@ export default function Footer() {
               <Image
                 src={LOGO_URL}
                 alt="Web-LineCreation"
-                width={36}
+                width={79}
                 height={36}
-                className="rounded-lg"
               />
               <span className="font-bold text-gradient">Web-LineCreation</span>
             </div>
